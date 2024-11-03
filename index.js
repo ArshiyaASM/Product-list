@@ -424,8 +424,8 @@ function readyToCheckout() {
             </div>`;
       addInfo();
     } else {
-      lightbox.classList.add("moblie");
-      lightbox.innerHTML = `<div class="confirmed moblie">
+      lightbox.classList.add("mobile");
+      lightbox.innerHTML = `<div class="confirmed mobile">
                 <div class="top">
                     <img src="./images/icon-order-confirmed.svg" alt="">
                     <h2>Order Confirmed</h2>
