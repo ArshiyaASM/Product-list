@@ -147,7 +147,7 @@ function addProductToHTML(item) {
   if (window.innerWidth <= 768) {
     if (item.quantity == 0) {
       productList.innerHTML += `<div class="item" id=${item.id}>
-                <img src=${item.img.mobile} style="border: 2px solid hsl(14, 86%, 42%);" alt="">
+                <img src=${item.img.mobile}  alt="">
                 <button class="btn"><img src="./images/icon-add-to-cart.svg" alt=""> Add to Cart</button>
                 <div class="text">
                     <p class="name">${item.name}</p>
@@ -159,7 +159,7 @@ function addProductToHTML(item) {
 
     } else {
       productList.innerHTML += `<div class="item" id=${item.id}>
-                <img src=${item.img.mobile}  alt="">
+                <img src=${item.img.mobile} style="border: 2px solid hsl(14, 86%, 42%);"  alt="">
                 <button class="btn quantity"><span class="dec"></span><span class="quantity">${item.quantity}</span><span class="plus"></span></button>
                 <div class="text">
                     <p class="name">${item.name}</p>
