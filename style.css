@@ -1,0 +1,413 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Kumbh+Sans:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&family=Space+Grotesk:wght@300..700&family=Young+Serif&display=swap');
+
+* {
+    padding: unset;
+    box-sizing: border-box;
+    margin: unset;
+}
+
+
+body {
+    background-color: hsl(13, 31%, 94%);
+    font-family: "Red Hat Text";
+}
+
+.container {
+    min-width: 375px;
+    max-width: 1200px;
+    min-height: 100vh;
+    margin: auto;
+    padding: 0px 15px;
+}
+
+
+.container h1 {
+    margin: 20px 0px;
+}
+
+
+.container .products {
+    display: grid;
+    gap: 20px 0px;
+    margin-bottom: 20px;
+}
+
+
+.container .products .item > img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.container .products .item button {
+    position: relative;
+    border: 1px solid hsl(12, 20%, 44%);
+    padding: 10px;
+    width: 150px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+    bottom: 25px;
+    background-color: #fff;
+    cursor: pointer;
+    user-select: none;
+}
+
+.container .products .item .text .name {
+    color: hsl(14, 25%, 72%);
+}
+
+.container .products .item .text .des {
+    color: hsl(14, 65%, 9%);
+    margin: 5px 0px;
+}
+
+.container .products .item .text .price {
+    color: hsl(14, 86%, 42%);
+    font-weight: 500;
+}
+
+.container .cart.empty {
+    background-color: hsl(20, 50%, 98%);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.container .cart.empty h2 {
+    color: hsl(14, 86%, 42%);
+}
+
+
+.container .cart.empty .img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container .cart.empty p {
+    text-align: center;
+    color: hsl(14, 65%, 9%);
+    margin-bottom: 20px;
+}
+
+
+.container .cart {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.container .cart h2 {
+    color: hsl(14, 86%, 42%);
+    margin-bottom: 20px;
+}
+
+
+.container .cart .list .item {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    border-bottom: 1px solid rgb(189, 185, 185);
+    padding: 10px 0px;
+}
+
+.container .cart .list {
+    margin-bottom: 30px;
+}
+
+.container .cart .list .item .text p:nth-child(1){
+    margin-bottom: 5px;
+}
+
+.container .cart .list .item .text p:nth-child(2) .quantity{
+    color: hsl(14, 86%, 42%);
+}
+
+.container .cart .list .item .text p:nth-child(2) .price {
+    color: hsl(14, 25%, 72%);
+}
+
+.container .cart .list .item .text p:nth-child(2) .totalPrice {
+    color: hsl(12, 20%, 44%);
+}
+
+.container .cart .list .item .icon {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.container .cart .list .item .icon span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 1px solid hsl(14, 25%, 72%);
+}
+
+
+.container .cart > .totalPrice {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0px; 
+}
+
+.container .cart > .totalPrice p:nth-child(2) {
+    font-weight: 500;
+}
+
+.container .info {
+    padding: 10px 5px;
+}
+
+.container .cart > button {
+    display: flex;
+    background-color: hsl(14, 86%, 42%);
+    color: #fff;
+    padding: 15px 0px;
+    width: 95%;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+}
+
+
+.container .info p {
+    background-color: hsl(13, 31%, 94%);
+    padding: 12px 5px;
+    border-radius: 5px;
+    font-size: 14px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+
+@media screen and (min-width : 768px){
+    .container {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        align-items: start;
+        padding-top: 100px;
+        margin-bottom: 50px;
+    }
+
+    .container h1 {
+        margin: 0px 0px 20px 10px;
+    }
+
+    .container .products {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        margin-right: 25px;
+        gap: 20px;
+    }
+}
+
+
+@media screen and (min-width : 998px) {
+    .container .products {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        margin-right: 25px;
+        gap: 20px;
+    }
+}
+
+
+.container .item .btn.quantity {
+    background-color: #c73a0f;
+    border: 1px solid hsl(14, 86%, 42%);
+    border: none;
+    color: #fff;
+    cursor: initial;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.container .item .btn.quantity .dec,
+.container .item .btn.quantity .plus{
+    height: 20px;
+    width: 20px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.container .item .btn.quantity .dec {
+    background-image: url(./images/icon-decrement-quantity.svg);
+}
+.container .item .btn.quantity .plus {
+    background-image: url(./images/icon-increment-quantity.svg);
+}
+
+
+.container .item .btn.quantity .plus:hover {
+    background-image: url(./images/icon-increment-quantity-red.svg);
+    background-color: #fff;
+}
+
+.container .item .btn.quantity .dec:hover {
+    background-image: url(./images/icon-decrement-quantity-red.svg);
+    background-color: #fff;
+}
+
+
+.lightbox.mobile {
+    height: 100vh;
+    background-color: #5652525b;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    display: none;
+}
+
+
+.lightbox {
+    height: 100vh;
+    background-color: #5652525b;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+
+
+
+.lightbox .confirmed.moblie {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    min-width: 375px;
+}
+
+.lightbox .confirmed {
+    width: 400px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    min-width: 375px;
+}
+
+.lightbox .confirmed .top img{
+    width: 35px;
+    margin-bottom: 10px;
+}
+
+
+.lightbox .confirmed .top p {
+    color: gray;
+    font-size: 12px;
+}
+
+.lightbox .confirmed .top {
+    margin-bottom: 20px;
+}
+
+
+.lightbox .confirmed .bg {
+    background-color: hsl(13, 31%, 94%);
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+} 
+
+
+.lightbox .confirmed .bg > .list {
+    margin-bottom: 20px;
+}
+
+.lightbox .confirmed .bg > .list > .item {
+    display: grid;
+    grid-template-columns: 20% 30% 50%;
+    /* height: 60px; */
+    border-bottom: 1px solid hsl(0, 4%, 84%);
+    padding: 10px 0px;
+}
+
+.lightbox .confirmed .bg .list > .item .img  {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.lightbox .confirmed .bg .list > .item .img img{
+    width: 50px;
+    border-radius: 5px;
+}
+
+
+.lightbox .confirmed .bg > .list  .item .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.lightbox .confirmed .bg > .list .item  .info p:nth-child(2) {
+    display: flex;
+}
+
+.lightbox .confirmed .bg > .list .item  .info p:nth-child(2) .quantity {
+    color: hsl(14, 86%, 42%);
+    font-size: 14px;
+}
+
+.lightbox .confirmed .bg > .list .item .info p:nth-child(2) .price {
+    font-size: 14px;
+    color: hsl(7, 20%, 60%);
+}
+
+.lightbox .confirmed .bg > .list .item .info p:nth-child(1){
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.lightbox .confirmed .bg > .list .item .totalPrice {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-weight: 500;
+}
+
+.lightbox .confirmed .bg > .totalPrice {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0px;
+}
+
+.lightbox .confirmed .bg > .totalPrice #totalPrice {
+    font-weight: 500;
+}
+
+.lightbox .confirmed .new_order_btn {
+    width: 100%;
+    background-color: hsl(14, 86%, 42%);
+    color: #fff;
+    padding: 15px 0px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
